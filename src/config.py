@@ -32,7 +32,7 @@ LOGGING_CONFIG = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'trademapper.log'
+            'filename': 'app.log'
         },
         'debugfilehandler': {
             'level': 'DEBUG',
