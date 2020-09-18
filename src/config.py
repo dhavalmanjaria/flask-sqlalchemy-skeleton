@@ -15,6 +15,8 @@ postgres_port = "5432"
 sqlalchemy_database_uri = "sqlite:///test.db"
 
 
+# For a good understanding on config
+# See: https://www.toptal.com/python/in-depth-python-logging#:~:text=There%20are%20six%20log%20levels,particularity%20will%20be%20addressed%20next.
 # Logging
 LOGGING_CONFIG = {
     'version': 1,
@@ -40,6 +42,11 @@ LOGGING_CONFIG = {
             'filename': 'app.log',
             'formatter': 'default'
         },
+        'consoledebughandler': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'default'
+        },
         'consolehandler': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
@@ -53,7 +60,7 @@ LOGGING_CONFIG = {
             'propogate': True,
         },
         'console': {
-            'handlers': ['consolehandler', 'debugfilehandler'],
+            'handlers': ['consoledebughandler', 'debugfilehandler'],
             'level': 'INFO',
             'propogate': True
         }
