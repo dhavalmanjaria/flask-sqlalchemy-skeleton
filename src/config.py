@@ -1,4 +1,5 @@
 from logging.config import dictConfig
+import data
 
 # Flask
 flask_host = "127.0.0.1"
@@ -13,6 +14,26 @@ postgres_host = "127.0.0.1"
 postgres_port = "5432"
 
 sqlalchemy_database_uri = "sqlite:///test.db"
+
+
+# For a good understanding on config
+# See: https://www.toptal.com/python/in-depth-python-logging#:~:text=There%20are%20six%20log%20levels,particularity%20will%20be%20addressed%20next.
+# Logging
+from config import *
+from logging.config import dictConfig
+
+# postgres
+postgres_username = 'postgres'
+postgres_password = 'password'
+db_name = "fortune-cookie"
+postgres_host = "127.0.0.1"
+postgres_port = "5432"
+
+### SQL Alchemy
+#sqlalchemy_database_uri = "postgresql://postgres:dhaval@localhost:5432/autostrategy"
+
+# SQLAlchemy for sqlite3
+sqlalchemy_database_uri = "sqlite:///mydb.db"
 
 
 # For a good understanding on config
@@ -61,7 +82,12 @@ LOGGING_CONFIG = {
         },
         'console': {
             'handlers': ['consoledebughandler', 'debugfilehandler'],
-            'level': 'INFO',
+            'level': 'DEBUG',
+            'propogate': True
+        },
+        'consoleonly': {
+            'handlers': ['consoledebughandler'],
+            'level': 'DEBUG',
             'propogate': True
         }
     }

@@ -37,32 +37,15 @@
 </head>
 <body>
     <!-- Standard container so you don't forget -->
-    <div class="jumbotron bg-secondary">
-        <h1 class="text-white">LOGIN</h1>
+    <div class="jumbotron jumbotron-fluid bg-secondary">
+        <div class="container">
+            <h1 class="text-white">Hello World</h1>
+        </div>
     </div>
     <div class="container">
         <div class="login-div d-flex justify-content-center p-3 mb-5  rounded border border-dark" >
-            <form method="POST" id="login-form">
-                <input class="form-control" type="text" placeholder="Username" name="username" id="username" />
-                <br>
-                <input class="form-control" type="password" placeholder="Password" name="password2" id="password1" />
-                <br>
-                <input class="form-control" type="password" placeholder="Confirm Password" name="password2" id="password2" />
-                <br>
-                <input class="form-control" type="text" placeholder="Institute ID" name="institute_id" id="institute-id" />
-                <br />
-
-                <div class="form-check">
-                    <label for="user_type">Admin</label>
-                    <input class="" type="radio" value="Admin" name="user_type" id="user-type-admin" />
-                    <br />
-
-                    <label for="user_type">Student</label>
-                    <input class="" type="radio" value="Student" name="user_type" id="user-type-student" />
-                    <br />
-                </div>
-                <input type="submit" class="btn btn-outline-dark btn-sm form-control" value="Submit">
-            </form>
+            Form goes here.
+            Foo = {{ foo }}
         </div>
     </div>
 </body>

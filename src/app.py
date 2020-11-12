@@ -8,7 +8,7 @@ import config
 import logging
 import os
 from data.models import *
-from data import dbapi
+from data import dbapi, init_db
 from api import v1
 from views import views
 
@@ -23,19 +23,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 root_dir = os.path.dirname(os.getcwd())
 
-# @app.route('/')
-# @app.route('/<path>')
-# def index(path=None):
-
-#     log.info("PATH: " + str(path))
-#     if path is not None:
-#         if '.js' in path or '.css' in path:
-#             return send_from_directory(os.path.join(root_dir, 'static'), path)
-    
-#     return send_from_directory('html', 'index.html')
-    
-
-
 def create_app():
     with app.app_context():
         app.register_blueprint(views)
@@ -43,4 +30,5 @@ def create_app():
 
 if __name__ == "__main__":
     create_app()
+    init_db(app)
     app.run(debug=True, host=config.flask_host, port=config.flask_port)

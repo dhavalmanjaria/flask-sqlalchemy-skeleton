@@ -27,5 +27,6 @@ def static_html(route):
     :param route:
     :return:
     """
-
-    return render_template('index.html')
+    context = {}
+    context['foo'] = 'bar'
+    return render_template('index.html', **context)
