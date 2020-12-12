@@ -26,6 +26,7 @@ root_dir = os.path.dirname(os.getcwd())
 def create_app():
     with app.app_context():
         app.register_blueprint(views)
+        app.register_blueprint(v1.v1)
 
 
 if __name__ == "__main__":

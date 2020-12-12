@@ -44,7 +44,15 @@
     </div>
     <div class="container">
         <div class="login-div d-flex justify-content-center p-3 mb-5  rounded border border-dark" >
-            Form goes here.
+            <form class='form' method="POST">
+                Name:
+                <input name="name"  class='form-control'>
+                Age:
+                <input name="age" class='form-control'>
+                Qualification:
+                <input name="qualification" class='form-control'>
+                <input type='submit' value='SAVE' class='btn btn-outline-info'>
+            </form>
             Foo = {{ foo }}
         </div>
     </div>
