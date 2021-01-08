@@ -27,9 +27,10 @@ def create_app():
     with app.app_context():
         app.register_blueprint(views)
         app.register_blueprint(v1.v1)
+    return app
 
 
 if __name__ == "__main__":
     create_app()
     init_db(app)
-    app.run(debug=True, host=config.flask_host, port=config.flask_port)
+    app.run(debug=False, host=config.flask_host, port=config.flask_port)
