@@ -26,7 +26,7 @@ root_dir = os.path.dirname(os.getcwd())
 def create_app():
     with app.app_context():
         app.register_blueprint(views)
-        app.register_blueprint(v1.v1)
+        app.register_blueprint(v1.v1, url_prefix='/api/v1')
     return app
 
 
