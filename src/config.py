@@ -36,6 +36,8 @@ postgres_port = "5432"
 sqlalchemy_database_uri = "sqlite:///mydb.db"
 
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = Path(dir_path)
 # For a good understanding on config
 # See: https://www.toptal.com/python/in-depth-python-logging#:~:text=There%20are%20six%20log%20levels,particularity%20will%20be%20addressed%20next.
 # Logging
@@ -60,7 +62,7 @@ LOGGING_CONFIG = {
         'debugfilehandler': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'app.log',
+            'filename': dir_path / 'app.log',
             'formatter': 'default'
         },
         'consoledebughandler': {
@@ -92,5 +94,6 @@ LOGGING_CONFIG = {
         }
     }
 }
-
 dictConfig(LOGGING_CONFIG)
+
+default_log = logging.getLogger('app')
