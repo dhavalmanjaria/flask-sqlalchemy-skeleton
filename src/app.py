@@ -33,4 +33,4 @@ def create_app():
 if __name__ == "__main__":
     create_app()
     init_db(app)
-    app.run(debug=False, host=config.flask_host, port=config.flask_port)
+    app.run(debug=True, host=config.flask_host, port=config.flask_port)

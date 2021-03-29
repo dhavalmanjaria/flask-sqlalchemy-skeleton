@@ -27,6 +27,7 @@
 
                     <!-- So it works on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/3.2.1/jquery.serializejson.min.js"></script>
 
 
                     <!-- Google fonts -->
@@ -44,17 +45,17 @@
     </div>
     <div class="container">
         <div class="login-div d-flex justify-content-center p-3 mb-5  rounded border border-dark" >
-            <form class='form' method="POST">
+            <form id="login-form" class='form'>
                 Name:
                 <input name="name"  class='form-control'>
                 Age:
-                <input name="age" class='form-control'>
+                <input type='number' name="age" class='form-control'>
                 Qualification:
                 <input name="qualification" class='form-control'>
                 <input type='submit' value='SAVE' class='btn btn-outline-info'>
             </form>
-            Foo = {{ foo }}
         </div>
+    <div id="log" class="alert"></div>
     </div>
 </body>
 

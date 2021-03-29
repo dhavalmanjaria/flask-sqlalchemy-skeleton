@@ -20,6 +20,16 @@ def execute():
 
 	data = request.json
 
+	print(data)
+
+	age = data.get('age')
+
+	if not 'qualification' in data.keys():
+		return jsonify(response="err", err='qualification missing'), 400
+
+	if not 'name' in data.keys():
+		return jsonify(response="err", err='name missing'), 400
+
 	return_data = {
 		"user": 10,
 		"role": "B12"
