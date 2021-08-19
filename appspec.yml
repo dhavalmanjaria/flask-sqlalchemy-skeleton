@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /src/
     destination: /home/ubuntu/backend
 permissions:
   - object: /home/ubuntu/backend
