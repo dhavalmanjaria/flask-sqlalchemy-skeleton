@@ -36,3 +36,8 @@ def execute():
 	}
 
 	return jsonify(response='ok', data=return_data)
+
+
+@v1.route('healthcheck')
+def healthcheck():
+	return jsonify(response="ok")

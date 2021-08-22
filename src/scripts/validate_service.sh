@@ -5,6 +5,6 @@
 
 
 sleep 5
-curl localhost:8000/healthcheck
+curl localhost:8000/api/v1/healthcheck
 
 
