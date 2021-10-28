@@ -13,3 +13,8 @@ class HistoricalData(db.Model):
     close = db.Column(db.Numeric)
     volume = db.Column(db.Integer)
 
+
+class Users(db.Model):
+    _id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String)
+    age = db.Column(db.Integer)
