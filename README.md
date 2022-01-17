@@ -4,6 +4,13 @@ This is an empty python tempalte app that uses Flask with Flask Blueprint and SQ
 
 ### Running the application
 
+#### Gunicorn
+
+Run the file `src/scripts/run_app.sh`. 
+
+Note that if you are uploading it to a linux server from a windows machine, you'll have to use the dos2unix utility (which will need to be installed on the Linux machine).
+
+
 #### Docker
 
 `sudo docker build -t <your_tag> .`
